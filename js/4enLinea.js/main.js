@@ -46,6 +46,7 @@ let divMsg = {
     msgWin : document.getElementById("game-msg-win"),
     divMsgPlayer : document.getElementById("game-msj"),
     divMsgReload : document.getElementById("game-msg-reload"),
+    divMsgClose : document.getElementById("game-msg-close"),
     divTimer : document.getElementById("game-timer"),
     divTie : document.getElementById("game-msg-tie"),
     msgTie : document.getElementById("msg-tie")
@@ -54,8 +55,11 @@ let divMsg = {
 let btns ={
     btnReplay : document.getElementById("btn-replay"),
     btnReload : document.getElementById("btn-reload"),
+    btnClose : document.getElementById("btn-close"),
     btnReloadYes: document.getElementById("btn-reload-yes"),
+    btnCloseYes: document.getElementById("btn-close-yes"),
     btnReloadNo: document.getElementById("btn-reload-no"),
+    btnCloseNo: document.getElementById("btn-close-no"),
     btnTie : document.getElementById("btn-tie")
 }
 
@@ -117,6 +121,7 @@ play.addEventListener('click', ()=>{
     checkSelectedOptions();
     popUp.classList.add('close');
     btns.btnReload.classList.remove('close');
+    btns.btnClose.classList.remove('close');
     divMsg.divTimer.classList.remove('close');
     msgPlayer.classList.remove('close');
     msgPlayer.classList.add('open');

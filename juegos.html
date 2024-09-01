@@ -38,15 +38,15 @@
                         <fieldset>
                             <legend class="legend-player">Jugador 1:</legend>
                             <label>
-                            <input id="harry1" type="radio" name="opcion-ficha2" value="harry-1"  class="chip-harry">
+                            <input id="harry1" type="radio" name="opcion-ficha" value="harry-1"  class="chip-harry">
                             <img id="ficha-harry-1" src="./img/juego/fichaHarry.png" alt="harry-1" class="img-choice-ficha">
                             </label>
                             <label>
-                            <input type="radio" name="opcion-ficha2" value="harry-2" id="harry2" class="chip-harry">
+                            <input type="radio" name="opcion-ficha" value="harry-2" id="harry2" class="chip-harry">
                             <img id="ficha-harry-2" src="./img/juego/fichaHermaioni.png" alt="harry-2" class="img-choice-ficha">
                             </label>
                             <label>
-                            <input type="radio" name="opcion-ficha2" value="harry-3" id="harry3" class="chip-harry">
+                            <input type="radio" name="opcion-ficha" value="harry-3" id="harry3" class="chip-harry">
                             <img id="ficha-harry-3" src="./img/juego/fichaRon.png" alt="harry-3" class="img-choice-ficha">
                             </label>
                         </fieldset>
@@ -56,15 +56,15 @@
                         <fieldset>
                             <legend class="legend-player">Jugador 2:</legend>
                             <label>
-                                <input id="voldemort1" type="radio" name="opcion-ficha" value="voldemort-1"  class="chip-voldemort">
+                                <input id="voldemort1" type="radio" name="opcion-ficha2" value="voldemort-1"  class="chip-voldemort">
                                 <img id="ficha-voldemort-1" src="./img/juego/fichaVoldemort.png" alt="voldemort-1" class="img-choice-ficha">
                             </label>
                             <label>
-                                <input type="radio" name="opcion-ficha" value="voldemort-2" id="voldemort2" class="chip-voldemort">
+                                <input type="radio" name="opcion-ficha2" value="voldemort-2" id="voldemort2" class="chip-voldemort">
                                 <img id="ficha-voldemort-2" src="./img/juego/fichaMalfoy.png" alt="voldemort-2" class="img-choice-ficha">
                             </label>
                             <label>
-                                <input type="radio" name="opcion-ficha" value="voldemort-3" id="voldemort3" class="chip-voldemort">
+                                <input type="radio" name="opcion-ficha2" value="voldemort-3" id="voldemort3" class="chip-voldemort">
                                 <img id="ficha-voldemort-3" src="./img/juego/fichaBellatrix.png" alt="voldemort-3" class="img-choice-ficha">
                             </label>
                         </fieldset>
@@ -90,6 +90,14 @@
             <button id="btn-reload-yes" class="buttons-choice-board">Si</button>
             <button id="btn-reload-no" class="buttons-choice-board">No</button>
         </div>
+        <div id="game-msg-close" class="popup popup-win close" >
+            <div>
+                <p class="title-game">Seguro que deseas salir del juego?</p>
+                <p class="title-game">Perderas todo tu avance...</p>
+            </div>
+            <button id="btn-close-yes" class="buttons-choice-board">Si</button>
+            <button id="btn-close-no" class="buttons-choice-board">No</button>
+        </div>
         <div id="game-msg-tie" class="popup popup-win close" >
             <div>
                 <br>
@@ -103,6 +111,7 @@
 
     <section class="game">
         <div id="game-timer" class="game-timer close"><p>Timer</p></div>
+        <button id="btn-close" class="close"></button>
         <button id="btn-reload" class="close"></button>
         <canvas id="myCanvas" style="border:1px solid #000000; background-color:#000">
             <img id="img-fija" src="./img/juego/imagenFicha.png" alt="img-tablero">

@@ -59,7 +59,10 @@ class Game {
         this.canvas.addEventListener('mouseleave', (e) => this.onMouseLeave(e), false);
         this.btns.btnReplay.addEventListener('click', (e) => this.reloadGame(e), false);
         this.btns.btnReload.addEventListener('click', (e) => this.popUpReload(e), false);
+        this.btns.btnClose.addEventListener('click', (e) => this.popUpClose(e), false);
         this.btns.btnReloadYes.addEventListener('click', (e) => this.reset(e), false);
+        this.btns.btnCloseYes.addEventListener('click', (e) => this.reloadGame(e), false);
+        this.btns.btnCloseNo.addEventListener('click', (e) => this.closePopUp(e), false);
         this.btns.btnReloadNo.addEventListener('click', (e) => this.closePopUpReload(e), false);
         this.btns.btnTie.addEventListener('click', (e) => this.reloadGame(e), false);
         
@@ -210,10 +213,22 @@ class Game {
         this.divMsg.divMsgReload.classList.add('close');
         
     }
+    //cierra el pop up de close
+    closePopUp(){
+        this.timer.start();
+        this.divMsg.divMsgClose.classList.add('close');
+        
+    }
 
     //abre el pop up de reinicio
     popUpReload(){
         this.divMsg.divMsgReload.classList.remove('close');
+        this.timer.stop();
+    }
+
+    //abre el pop up close
+    popUpClose(){
+        this.divMsg.divMsgClose.classList.remove('close');
         this.timer.stop();
     }
 
@@ -230,7 +245,6 @@ class Game {
         this.divMsg.divMsgPlayer.classList.add('close');
         this.divMsg.msgWin.classList.remove('close');
         this.divMsg.spanWin.innerHTML = this.currentPlayer; 
-   
         this.divMsg.imgWin.appendChild(img);
     }
     
