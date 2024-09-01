@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/game.css">
+    <title>Juego</title>
+</head>
+
+<body id="juegos"> 
+    <div class="breadcrumb">
+        <div id="game-msj" class="game-msj close"><span class="player-turn"></span> </div>
+
+        <div id="game-msg2" class="popup" >
+            <!-- <p id="msgPopup"></p> -->
+            <p class="title-game">Harry vs Voldemort</p>
+            <div class="container-form-game">
+                <div>
+                    <form class="choice-board">
+                        <legend>Elegi tu tablero:</legend>
+                        <label>
+                            <input id="4-en-linea" type="radio" name="opcion" value="opcion1"> Beginner
+                        </label>
+                        <label>
+                            <input id="5-en-linea" type="radio" name="opcion" value="opcion2"> Normal
+                        </label>
+                        <label>
+                            <input id="6-en-linea"  type="radio" name="opcion" value="opcion3"> Hard
+                        </label>
+                    </form>
+                </div>
+                <button id="btn-play" class="buttons-choice-board">JUGAR</button>
+                <div class="choice-chip">
+                    
+                    <form class="form-choice-chip">
+                        <legend>Escoge tu ficha</legend>
+                        <fieldset>
+                            <legend class="legend-player">Jugador 1:</legend>
+                            <label>
+                            <input id="harry1" type="radio" name="opcion-ficha2" value="harry-1"  class="chip-harry">
+                            <img id="ficha-harry-1" src="./img/juego/fichaHarry.png" alt="harry-1" class="img-choice-ficha">
+                            </label>
+                            <label>
+                            <input type="radio" name="opcion-ficha2" value="harry-2" id="harry2" class="chip-harry">
+                            <img id="ficha-harry-2" src="./img/juego/fichaHermaioni.png" alt="harry-2" class="img-choice-ficha">
+                            </label>
+                            <label>
+                            <input type="radio" name="opcion-ficha2" value="harry-3" id="harry3" class="chip-harry">
+                            <img id="ficha-harry-3" src="./img/juego/fichaRon.png" alt="harry-3" class="img-choice-ficha">
+                            </label>
+                        </fieldset>
+                    </form>
+                    <form id="form-voldemort" class="form-choice-chip">
+                        <br>
+                        <fieldset>
+                            <legend class="legend-player">Jugador 2:</legend>
+                            <label>
+                                <input id="voldemort1" type="radio" name="opcion-ficha" value="voldemort-1"  class="chip-voldemort">
+                                <img id="ficha-voldemort-1" src="./img/juego/fichaVoldemort.png" alt="voldemort-1" class="img-choice-ficha">
+                            </label>
+                            <label>
+                                <input type="radio" name="opcion-ficha" value="voldemort-2" id="voldemort2" class="chip-voldemort">
+                                <img id="ficha-voldemort-2" src="./img/juego/fichaMalfoy.png" alt="voldemort-2" class="img-choice-ficha">
+                            </label>
+                            <label>
+                                <input type="radio" name="opcion-ficha" value="voldemort-3" id="voldemort3" class="chip-voldemort">
+                                <img id="ficha-voldemort-3" src="./img/juego/fichaBellatrix.png" alt="voldemort-3" class="img-choice-ficha">
+                            </label>
+                        </fieldset>
+                    </form>
+                </div>
+                <p id="msg-options"></p>
+            </div>
+        </div>
+        <div id="game-msg-win" class="popup popup-win close" >
+            <div>
+                <p class="title-game">FELICITACIONES!  </p>
+                <p class="title-game">GANADOR:  <span id="span-win" class="title-game"></span></p>
+            </div>
+            <div id="img-win">
+            </div>
+            <button id="btn-replay" class="buttons-choice-board">Volver a Jugar</button>
+        </div>
+        <div id="game-msg-reload" class="popup popup-win close" >
+            <div>
+                <p class="title-game">Seguro que deseas reiniciar el juego?</p>
+                <p class="title-game">Perderas todo tu avance...</p>
+            </div>
+            <button id="btn-reload-yes" class="buttons-choice-board">Si</button>
+            <button id="btn-reload-no" class="buttons-choice-board">No</button>
+        </div>
+        <div id="game-msg-tie" class="popup popup-win close" >
+            <div>
+                <br>
+                <p class="title-game">Juego Empatado</p>
+                <p id="msg-tie"></p>
+            </div>
+            <button id="btn-tie" class="buttons-choice-board">Volver a Jugar</button>
+        </div>
+    </div>
+
+
+    <section class="game">
+        <div id="game-timer" class="game-timer close"><p>Timer</p></div>
+        <button id="btn-reload" class="close"></button>
+        <canvas id="myCanvas" style="border:1px solid #000000; background-color:#000">
+            <img id="img-fija" src="./img/juego/imagenFicha.png" alt="img-tablero">
+            <img id="fondo-tablero" src="./img/juego/harry.jpeg" alt="fondo-tablero">
+            <img id="fondo-tablero2" src="./img/juego/harry.jpeg" alt="fondo-tablero">
+            <img id="img-arrow" src="./img/juego/arrow.svg" alt="arrow">
+
+        </canvas>
+    </section>   
+</body>
+<script src="./js/4enLinea.js/Arrow.js"></script>
+<script src="./js/4enLinea.js/Timer.js"></script>
+<script src="./js/4enLinea.js/Board.js"></script>
+<script src="./js/4enLinea.js/Chip.js"></script>
+<script src="./js/4enLinea.js/Game.js"></script>
+<script src="./js/4enLinea.js/main.js"></script>
+</html>
